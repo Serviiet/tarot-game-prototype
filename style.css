@@ -24,3 +24,37 @@ button {
 button:disabled {
     background-color: #ccc;
 }
+.card {
+  width: 80px;
+  height: 120px;
+  background-color: #1f1f3f;
+  border: 2px solid #aaa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.controls button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #f4d03f;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #333;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
