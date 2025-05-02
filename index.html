@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Tarot Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Jeu de Tarot - Prototype</h1>
+    
+    <div id="gameState">
+        <h2>État du jeu : <span id="state">En attente de joueurs...</span></h2>
+    </div>
+
+    <div id="players">
+        <button id="joinGame">Rejoindre le jeu</button>
+        <button id="placeBet" disabled>Placer une mise (1 ETH)</button>
+    </div>
+
+    <div id="betting">
+        <h3>Mise actuelle : <span id="betAmount">0</span> ETH</h3>
+        <button id="endGame" disabled>Finir la partie</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
