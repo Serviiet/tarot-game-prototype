@@ -50,3 +50,35 @@ endGameButton.addEventListener('click', () => {
         betAmountElement.textContent = betAmount;
     }
 });
+const suits = ['♠', '♥', '♦', '♣'];
+const values = ['1','2','3','4','5','6','7','8','9','10','V','C','D','R'];
+const trumps = Array.from({length: 21}, (_, i) => `Atout ${i + 1}`);
+const excuse = ['Excuse'];
+
+let deck = [];
+
+function createDeck() {
+  deck = [];
+  suits.forEach(suit => {
+    values.forEach(value => deck.push(`${value}${suit}`));
+  });
+  deck.push(...trumps);
+  deck.push(...excuse);
+}
+
+function drawCard() {
+  if (deck.length === 0) createDeck();
+  const index = Math.floor(Math.random() * deck.length);
+  const card = deck.splice(index, 1)[0];
+  const cardEl = document.createElement('div');
+  cardEl.className = 'card';
+  cardEl.textContent = card;
+  document.getElementById('player-hand').appendChild(cardEl);
+}
+
+function resetGame() {
+  document.getElementById('player-hand').innerHTML = '';
+  createDeck();
+}
+
+createDeck();
